@@ -1,0 +1,218 @@
+@font-face {
+    font-family: "Dogica";
+    src: url("../fonts/dogicapixel.otf");
+}
+
+@font-face {
+    font-family: "Dogica";
+    font-weight: bold;
+    src: url("../fonts/dogicapixelbold.otf");
+}
+
+li > a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body,
+div {
+    border: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    background-size: cover;
+    background-image: url('../images/subspace.png');
+    font-family: "Dogica";
+    zoom: 0.70;
+    
+}
+
+.map {
+    background-size: cover;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.checkerboard {
+    background-image: url('../images/checkerboard.png');
+    background-repeat: repeat;
+}
+
+#contents {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: -100;
+}
+
+/* Logo Container */
+.logo {
+    padding: 1em;
+    font-size: 16pt;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: fit-content;
+    zoom: 100%;
+}
+
+#realShit {
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo span {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    text-shadow: .1em .1em black;
+    line-height: 1.5em;
+    padding-bottom: .5em;
+    text-align: center;
+}
+
+.logo img {
+    display: block;
+    width: 30em;
+    height: auto;
+}
+
+#map-wrapper {
+    flex-grow: 1;
+}
+
+#map-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* background-image: url('../images/CleanMap2x.png'); */
+    background-image: url('../images/GlitchMap2x.gif');
+    overflow: hidden;
+    z-index: -2;
+}
+
+#real-map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/CleanMap2x.png');
+    z-index: 0;
+    /* opacity: .75; */
+}
+
+#reticle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#reticle .decoration {
+    position: absolute;
+    background-image: url('../images/lens.png');
+    background-size: contain;
+    background-position: top left;
+    background-repeat: no-repeat;
+    top: -14em;
+    left: -15em;
+    width: 55em;
+    height: 55em;
+}
+
+#characters {
+    align-self: flex-start;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+#dates {
+    position: relative;
+    align-self: flex-start;
+    margin: 2em;
+    margin-top: 0;
+}
+
+.padding {
+    display: flex;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-width: 32px;
+    border-color: transparent;
+    border-image: url('../images/window-border.png') 32 32 round;
+    border-image-slice: 32;
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+#dates .checkerboard {
+    flex-grow: 1;
+}
+
+#dates ul {
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#dates li {
+    padding: .5em;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-shadow: .1em .1em rgb(11, 67, 77);
+}
+
+.show-info {
+    padding: 1em;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-shadow: .1em .1em rgb(11, 67, 77);
+    line-height: 1.2;
+}
+
+.show-info a {
+    text-shadow: none;
+}
+
+.hide {
+    display: none;
+}
+
+.close {
+    display: block;
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    width: 1em;
+    color: black;
+    text-shadow: none;
+    cursor: pointer;
+}
